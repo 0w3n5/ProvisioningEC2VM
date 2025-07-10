@@ -1,9 +1,7 @@
 
-Here’s a simple **How To Use** section you can include in your README.md:
 
----
 
-## 🚀 How To Use
+## How To Use
 
 ### Prerequisites
 

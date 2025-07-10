@@ -1,22 +1,32 @@
 # variables we can call throughout the project
 
-# set the aws region
-
-variable "aws_region" {
-  type    = string
-  default = "eu-west-2"
-}
-
-
-# sets amu as a string variable you can change later in terraform
-
 variable "ami_id" {
-  type = string
+  description = "AMI ID for EC2"            # Human-readable description for documentation
+  type        = string                      # Input must be a string
 }
-
-# selects the type of EC2 instance we will call
 
 variable "instance_type" {
-  type    = string
-  default = "t2.micro"
+  description = "EC2 instance type"
+  type        = string
+  default     = "t3.micro"                  # Provide a default (can be overridden in tfvars)
+}
+
+variable "key_name" {
+  description = "Name of the SSH key pair"
+  type        = string
+}
+
+variable "subnet_id" {
+  description = "ID of the public subnet"
+  type        = string
+}
+
+variable "security_group_id" {
+  description = "Security group for the instance"
+  type        = string
+}
+
+variable "environment" {
+  description = "Deployment environment"
+  type        = string
 }
